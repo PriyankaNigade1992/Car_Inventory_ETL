@@ -1,0 +1,55 @@
+# We can add new provider's schema in this dictionary, The Index of the column in PROVIDERS_SCHEMA_COLUMNS matching with the index of the DEALER_DATA_COLUMNS
+
+class Mappings:
+    DEALER_DATA_COLUMNS = ['dealership_id', 'vin', 'mileage', 'is_new', 'stock_number', 'dealer_year',
+                           'dealer_make',
+                           'dealer_model',
+                           'dealer_trim', 'dealer_model_number',
+                           'dealer_msrp',
+                           'dealer_invoice',
+                           'dealer_body',
+                           'dealer_inventory_entry_date',
+                           'dealer_exterior_color_description',
+                           'dealer_interior_color_description',
+                           'dealer_exterior_color_code',
+                           'dealer_interior_color_code',
+                           'dealer_transmission_name',
+                           'dealer_installed_option_codes',
+                           'dealer_installed_option_descriptions',
+                           'dealer_additional_specs',
+                           'dealer_doors text',
+                           'dealer_drive_type',
+                           'updated_at timestamp',
+                           'dealer_images',
+                           'dealer_certified']
+
+    PROVIDERS_SCHEMA_COLUMNS = {
+
+        'provider1': {'Dealer ID': 'dealership_id', 'VIN': 'vin', 'Miles': 'mileage', 'Type': 'is_new',
+                      'Stock': 'stock_number', 'Year': 'dealer_year', 'Make': 'dealer_make',
+                      'Model': 'dealer_model', 'Trim': 'dealer_trim',
+                      'ModelNumber': 'dealer_model_number', 'MSRP': 'dealer_msrp',
+                      'Invoice': 'dealer_invoice', 'Body': 'dealer_body', 'DateInStock': 'dealer_inventory_entry_date',
+                      'ExteriorColor': 'dealer_exterior_color_description',
+                      'InteriorColor': 'dealer_interior_color_description',
+                      'ExteriorColorCode': 'dealer_exterior_color_code',
+                      'InteriorColorCode': 'dealer_interior_color_code',
+                      'Transmission': 'dealer_transmission_name', 'OptionCode': 'dealer_installed_option_codes',
+                      'OptionDescription': 'dealer_installed_option_descriptions',
+                      'AdditionalSpecs': 'dealer_additional_specs',
+                      'Drivetrain': 'dealer_drive_type',
+                      'ImageList': 'dealer_images', 'Certified': 'dealer_certified'},
+        'provider2': {'DealerId': 'dealership_id', 'VIN': 'vin', 'Mileage': 'mileage', 'New/Used': 'is_new',
+                      'Stock #': 'stock_number', 'Year': 'dealer_year',
+                      'Make': 'dealer_make', 'Model': 'dealer_model', 'Trim': 'dealer_trim',
+                      'Model Code': 'dealer_model_number', 'MSRP': 'dealer_msrp',
+                      'Invoice': 'dealer_invoice', 'Inventory Date': 'dealer_inventory_entry_date',
+                      'Exterior Color': 'dealer_exterior_color_description',
+                      'Interior Color': 'dealer_interior_color_description',
+                      'Exterior Color Code': 'dealer_exterior_color_code',
+                      'Interior Color Code': 'dealer_interior_color_code',
+                      'Transmission': 'dealer_transmission_name', 'Option Codes': 'dealer_installed_option_codes',
+                      'Options': 'dealer_installed_option_descriptions', 'Photos': 'dealer_images',
+                      'Certified': 'dealer_certified'}
+    }
+
