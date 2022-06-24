@@ -8,7 +8,7 @@ import src.data_processor as dp
 from datetime import datetime
 
 try:
-    conn = psycopg2.connect(database="Rodo_Car_Inventories", user="postgres", password="Mercyhurst100%",
+    conn = psycopg2.connect(database="Rodo_Car_Inventories", user="postgres", password="postgres",
                             host="localhost", port="5432")
 except:
     print("connection to the database failed")
