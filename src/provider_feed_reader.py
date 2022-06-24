@@ -8,7 +8,7 @@ import src.data_processor as dp
 from datetime import datetime
 
 try:
-    conn = psycopg2.connect(database="Rodo_Car_Inventories", user="postgres", password="postgres",
+    conn = psycopg2.connect(database="Rodo_Car_Inventories", user="postgres", password="Mercyhurst100%",
                             host="localhost", port="5432")
 except:
     print("connection to the database failed")
@@ -18,7 +18,7 @@ except:
 
 class SchemaReader:
     def __init__(self):
-        self.PROVIDERS_FILES_PATH = "../feeds/"
+        self.PROVIDERS_FILES_PATH = "feeds/"
         self.EXT = "*.csv"
 
     # Get all files and associate with its provider
@@ -26,7 +26,7 @@ class SchemaReader:
         all_csv_files = []
         for path, subdir, files in os.walk(self.PROVIDERS_FILES_PATH):
             for file in glob(os.path.join(path, self.EXT)):
-                provider = file.split('/')[2]
+                provider = file.split('/')[1]
                 all_csv_files.append({'provider': provider, 'file': file})
 
         # print(all_csv_files)
